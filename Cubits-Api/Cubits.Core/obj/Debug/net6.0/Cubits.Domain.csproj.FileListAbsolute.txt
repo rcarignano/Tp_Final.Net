@@ -1,0 +1,11 @@
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\bin\Debug\net6.0\Cubits.Domain.deps.json
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\bin\Debug\net6.0\Cubits.Domain.dll
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\bin\Debug\net6.0\Cubits.Domain.pdb
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\Cubits.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\Cubits.Domain.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\Cubits.Domain.AssemblyInfo.cs
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\Cubits.Domain.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\Cubits.Domain.dll
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\refint\Cubits.Domain.dll
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\Cubits.Domain.pdb
+C:\Users\USUARIO\Desktop\Sabado\TpFinal.net\TpFinal.Net\Cubits-Api\Cubits.Core\obj\Debug\net6.0\ref\Cubits.Domain.dll

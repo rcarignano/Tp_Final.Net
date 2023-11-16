@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wOLNo5jKnrZZ0LWT84e1ENScU5Tk1YpqQLvFqjPSnIFbwhWyY7b9EZPRpKdrkHpSjTKrbeEd/ugAjVA8yrZTiA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USUARIO\\Desktop\\Sabado\\TpFinal.net\\TpFinal.Net\\Cubits-Api\\Cubits.Infraestructure\\Cubits.Infraestructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
