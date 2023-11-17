@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Cubits.Application.Contracts.GetClientList;
+using Cubits.Application.Exceptions;
 using Cubits.Application.Models;
+using Cubits.Application.Validators;
 using Cubits.Domain.Entities;
 using Cubits.Domain.Ports;
 using MediatR;
@@ -27,6 +29,12 @@ namespace Cubits.Application.Handlers
         {
             var response= new GetClientListResponse();
             var clientList = await _clientRepository.GetList();
+
+            if (clientList == null || !clientList.Any())
+            {
+                throw new NotFoundException();
+            }
+
             response.ClientList=clientList
                 .Select(MapTo)
                 .ToList();

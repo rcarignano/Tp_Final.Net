@@ -1,7 +1,10 @@
 ﻿using Cubits.Domain.Entities;
 using Cubits.Domain.Ports;
+using Cubits.Infraestructure.Database;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,35 +13,26 @@ namespace Cubits.Infraestructure.Repositories
 {
     public class ClientRepository : IClientRepository
     {
-        public async Task<Client> Get(int clientid)
+        private readonly SqlServerContext _dbContext;
+
+        public ClientRepository(SqlServerContext dbContext)
         {
-            await Task.Delay(100);
-            return new Client
-            {
-                ClientId = clientid,
-                Name = "Evaluna",
-                StreetName = "Canada",
-                City = "San Fco",
-                Province="Cordoba",
-                Region="Este"
-            };
+            _dbContext = dbContext;
+        }
+
+        public async Task<Client?> Get(int clientId)
+        {
+            return await _dbContext
+            .Set<Client>()
+            .Where(c => c.ClientId == clientId)
+            .FirstOrDefaultAsync();
         }
 
         public async Task<List<Client>> GetList()
         {
-            await Task.Delay(100);
-            return new List<Client>
-        {
-            new Client
-            {
-                ClientId = 1,
-                Name="Roman",
-                StreetName = "Canada",
-                City = "San Fco",
-                Province="Cordoba",
-                Region="Sur"
-            }
-        };
+            return await _dbContext
+           .Set<Client>()
+           .ToListAsync();
         }
     }
 }

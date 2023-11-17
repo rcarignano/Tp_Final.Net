@@ -5,6 +5,7 @@ using Cubits.Application.Models;
 using Cubits.Application.Validators;
 using Cubits.Domain.Ports;
 using MediatR;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cubits.Application.Handlers
 {
@@ -15,19 +16,22 @@ namespace Cubits.Application.Handlers
 
         public GetClientHandler(IClientRepository clientRepository, IMapper mapper)
         {
-            _clientRepository = clientRepository;
-            _mapper = mapper;
+            _clientRepository = clientRepository ?? throw new ArgumentNullException(nameof(clientRepository));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         public async Task<GetClientResponse> Handle(GetClientRequest request, CancellationToken cancellationToken)
         {
             var response = new GetClientResponse();
+
             var client = await _clientRepository.Get(request.ClientId);
             if (client == null)
-                throw new NotFoundExeption();
+            {
+                throw new NotFoundException();
+            }
+
             response.Client = _mapper.Map<ClientDto>(client);
             return response;
-
         }
     }
 }
