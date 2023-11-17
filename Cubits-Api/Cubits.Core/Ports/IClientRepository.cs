@@ -6,6 +6,7 @@ namespace Cubits.Domain.Ports
     public interface IClientRepository
     {
         Task<List<Client>> GetList();
+
         Task<Client> Get(int clientId);
     }
 }
