@@ -6,6 +6,15 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost5173", builder =>
+    {
+        builder.WithOrigins("http://localhost:5173")
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -19,7 +28,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseAuthorization();
-
+app.UseCors("AllowLocalhost5173");
 app.MapControllers();
 
 app.Run();
