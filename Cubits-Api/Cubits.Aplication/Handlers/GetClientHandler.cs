@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Cubits.Application.Handlers
 {
-    internal class GetClientHandler : IRequestHandler<GetClientRequest, GetClientResponse>
+    public class GetClientHandler : IRequestHandler<GetClientRequest, GetClientResponse>
     {
         private readonly IClientRepository _clientRepository;
         private readonly IMapper _mapper;
