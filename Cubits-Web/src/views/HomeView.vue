@@ -63,7 +63,7 @@ const searchClients = async () => {
     const response = await axios.get('http://localhost:5000/api/v1/client');
     clients.value = response.data.clientList;
   } catch (error : any) {
-    console.error('Error al buscar clientes:', error);
+    console.error('Error al buscar cliente:', error);
   }
 };
 
